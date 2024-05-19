@@ -9,6 +9,9 @@ interface DAO {
     @Query("SELECT * FROM recipe_table")
     suspend fun getAll(): List<Recipe>
 
+    @Query("SELECT * FROM recipe_table WHERE id = :recipeId")
+    suspend fun getById(recipeId: Long): Recipe?
+
     @Insert
     suspend fun insert(recipe: Recipe)
 
