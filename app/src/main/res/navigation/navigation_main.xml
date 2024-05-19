@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/savedRecipeFragment">
+
+    <fragment
+        android:id="@+id/savedRecipeFragment"
+        android:name="com.tasks.saved_recipe.SavedRecipeFragment"
+        android:label="SavedRecipeFragment"
+        tools:layout="@layout/fragment_saved_recipe">
+        <action
+            android:id="@+id/action_savedRecipeFragment_to_seeRecipeContextFragment"
+            app:destination="@id/seeRecipeContextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeRecipeContextFragment"
+        android:name="com.tasks.see_recipe_context.SeeRecipeContextFragment"
+        android:label="SeeRecipeContextFragment"
+        tools:layout="@layout/fragment_see_recipe_context"/>
+</navigation>

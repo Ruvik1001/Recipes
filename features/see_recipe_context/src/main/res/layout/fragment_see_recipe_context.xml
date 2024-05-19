@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SeeRecipeContextFragment">
+
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            style="@style/LargeTextCenter"
+            android:paddingHorizontal="@dimen/small_dp"
+            android:layout_margin="@dimen/small_dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:hint="@string/title_hint"
+            android:textColorHint="@color/white_inv_50"/>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_ico_black"
+            android:layout_marginTop="@dimen/medium_dp"
+            android:paddingHorizontal="@dimen/small_dp"
+            />
+
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_ico_black"
+            android:layout_marginTop="@dimen/medium_dp"
+            android:paddingHorizontal="@dimen/small_dp"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleContainer"
+        android:paddingHorizontal="@dimen/small_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/th_ingredients"
+                android:textStyle="bold"
+                style="@style/MediumText"
+                android:padding="@dimen/small_dp"/>
+
+            <EditText
+                android:id="@+id/etIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_ingredients_hint"
+                style="@style/MediumEditText"
+                android:padding="@dimen/small_dp"/>
+
+            <TextView
+                android:id="@+id/tvRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_recipe"
+                android:textStyle="bold"
+                style="@style/MediumText"
+                android:padding="@dimen/small_dp"/>
+
+            <EditText
+                android:id="@+id/etRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_recipe_hint"
+                style="@style/MediumEditText"
+                android:padding="@dimen/small_dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LargeText" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">@dimen/large_sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LargeTextCenter" parent="LargeText">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MediumText" parent="LargeText">
+        <item name="android:textSize">@dimen/medium_sp</item>
+    </style>
+
+    <style name="MediumTextCenter" parent="MediumText">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SmallText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">@dimen/small_sp</item>
+    </style>
+
+    <style name="SmallTextCenter" parent="SmallText">
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="LargeButton">
+
+        <item name="android:background">@drawable/rounder_button</item>
+        <item name="android:textSize">@dimen/large_sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LargeButtonCenter" parent="LargeButton">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MediumButton" parent="LargeButton">
+        <item name="android:textSize">@dimen/medium_sp</item>
+    </style>
+
+    <style name="MediumButtonCenter" parent="MediumButton">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SmallButton" parent="MediumButton">
+        <item name="android:textSize">@dimen/small_sp</item>
+    </style>
+
+    <style name="SmallButtonCenter" parent="SmallButton">
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <style name="LargeEditText">
+        <item name="android:padding">@dimen/small_dp</item>
+        <item name="android:textSize">@dimen/large_sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounder_edit_with_border</item>
+    </style>
+
+    <style name="LargeEditTextCenter" parent="LargeEditText">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MediumEditText" parent="LargeEditText">
+        <item name="android:textSize">@dimen/medium_sp</item>
+    </style>
+
+    <style name="MediumEditTextCenter" parent="MediumEditText">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SmallEditText" parent="MediumEditText">
+        <item name="android:textSize">@dimen/small_sp</item>
+    </style>
+
+    <style name="SmallEditTextCenter" parent="SmallEditText">
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

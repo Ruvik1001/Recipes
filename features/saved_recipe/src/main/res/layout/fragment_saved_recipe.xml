@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SavedRecipeFragment">
+
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/tvRecipesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_recipes"
+            style="@style/LargeTextCenter"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleContainer"
+        android:paddingHorizontal="@dimen/small_dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ibAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/medium_dp"
+        android:background="@drawable/round_bg_50"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/add_ico_black" />
+
+</RelativeLayout>

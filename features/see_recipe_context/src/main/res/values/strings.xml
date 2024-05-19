@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_hint">Название</string>
+    <string name="et_recipe_hint">Начните вводить рецепт</string>
+    <string name="et_ingredients_hint">Начните вводить ингредиенты</string>
+    <string name="th_ingredients">Ингредиенты:</string>
+    <string name="tv_recipe">Рецепт:</string>
+</resources>
