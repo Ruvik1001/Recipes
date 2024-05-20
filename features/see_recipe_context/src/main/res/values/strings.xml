@@ -5,4 +5,12 @@
     <string name="et_ingredients_hint">Начните вводить ингредиенты</string>
     <string name="th_ingredients">Ингредиенты:</string>
     <string name="tv_recipe">Рецепт:</string>
+    <string name="empty_title">Название не может быть пустым!</string>
+    <string name="exit">Выход</string>
+    <string name="save_changes">Сохранить изменения перед выходом?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="rename">Переименовать</string>
+    <string name="new_name">Новое название</string>
+    <string name="confirm">Принять</string>
 </resources>

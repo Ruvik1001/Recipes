@@ -21,7 +21,6 @@
             android:layout_weight="80"
             style="@style/LargeTextCenter"
             android:paddingHorizontal="@dimen/small_dp"
-            android:layout_margin="@dimen/small_dp"
             android:gravity="center"
             android:textColor="@color/white"
             android:background="@color/blue"
@@ -35,16 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/edit_ico_black"
-            android:layout_marginTop="@dimen/medium_dp"
-            android:paddingHorizontal="@dimen/small_dp"
-            />
-
-        <ImageView
-            android:id="@+id/btnShare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/share_ico_black"
-            android:layout_marginTop="@dimen/medium_dp"
+            android:layout_marginTop="5dp"
             android:paddingHorizontal="@dimen/small_dp"
             />
 

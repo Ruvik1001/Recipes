@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_recipes">Рецепты на устройстве</string>
+    <string name="mask_for_share">"\nРецепт: %1$s\n\nИнгредиенты:\n%2$s\n\nОписание:\n%3$s\n"</string>
+    <string name="cant_load_net_recipe">Не удалось загрузить начальные рецепты</string>
+    <string name="name">Введите название блюда</string>
+    <string name="create_item">Блюдо</string>
+    <string name="empty_title">Название не может быть пустым!</string>
 </resources>

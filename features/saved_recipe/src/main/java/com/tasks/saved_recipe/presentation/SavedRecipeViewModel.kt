@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.tasks.core.getCurrentDateTime
 import com.tasks.domain.api.RetrofitClient
 import com.tasks.domain.room.DB
 import com.tasks.domain.room.DBProvider
@@ -19,17 +20,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SavedRecipeViewModel(
-    private val applicationContext: Context,
+    applicationContext: Context,
     private val savedRecipeRouter: SavedRecipeRouter
 ) : ViewModel() {
-    private lateinit var db: DB
+    private var db: DB
     private val mRecipeList = MutableLiveData<List<Recipe>>(listOf())
     val recipeList: LiveData<List<Recipe>> = mRecipeList
 
     init {
-        CoroutineScope(Dispatchers.IO).launch {
-            db = DBProvider.getDB(applicationContext)
-        }
+        db = DBProvider.getDB(applicationContext)
     }
 
     fun loadRecipesFromNet(success: (Boolean)->Unit) {
@@ -68,14 +67,33 @@ class SavedRecipeViewModel(
 
     fun lunchRecipes() {
         CoroutineScope(Dispatchers.IO).launch {
-            val list = db.recipeDao().getAll()
+            val list = db.recipeDao().getAllSortedByTimestamp()
             withContext(Dispatchers.Main) {
                 mRecipeList.postValue(list)
             }
         }
     }
 
+    fun removeRecipe(recipeId: Long) {
+        CoroutineScope(Dispatchers.IO).launch {
+            db.recipeDao().delete(recipeId)
+            withContext(Dispatchers.Main) { lunchRecipes() }
+        }
+    }
+
     fun openRecipe(recipeId: Long) {
         savedRecipeRouter.goToSeeRecipe(recipeId)
+    }
+
+    fun createRecipe(recipeName: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            db.recipeDao().insert(Recipe(
+                name = recipeName,
+                ingredients = "",
+                description = "",
+                timestamp = getCurrentDateTime()
+            ))
+            withContext(Dispatchers.Main) { lunchRecipes() }
+        }
     }
 }

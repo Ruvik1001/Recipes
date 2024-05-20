@@ -32,7 +32,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/titleContainer"
+        android:layout_above="@id/ibAdd"
         android:paddingHorizontal="@dimen/small_dp"/>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ibAdd"
